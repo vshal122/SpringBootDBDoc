@@ -14,12 +14,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.print.Doc;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.Document;
 import java.io.ByteArrayInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -30,12 +34,6 @@ public class TableInfoControllerImpl implements ITableInfoController{
     @Autowired
     private ITableInfoService iTableInfoService;
 
-    private final PdfGeneratorService pdfGeneratorService;
-
-    public TableInfoControllerImpl(PdfGeneratorService pdfGeneratorService) {
-        this.pdfGeneratorService = pdfGeneratorService;
-    }
-
     @Override
     public List<String> getAllTableName() {
 
@@ -44,57 +42,30 @@ public class TableInfoControllerImpl implements ITableInfoController{
 
 
     @Override
-    public ResponseEntity<InputStreamResource> tableInfoReport() {
+    public ResponseEntity<InputStreamResource> tableInfoReport() throws IOException {
 
         List<TableInfo> tableInfo=new ArrayList<TableInfo>();
         List<List<TableInfo>> allDbTable = new ArrayList<>();
 
         List<String> listofTableName = iTableInfoService.getAllTable();
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 4; i++) {
             tableInfo = iTableInfoService.gettingTableInfo(listofTableName.get(i));
             allDbTable.add(tableInfo);
         }
-        ByteArrayInputStream bis =  GeneratePdfReport.tableDescReport(allDbTable);
-        var headers = new HttpHeaders();
-        headers.add("Content-Disposition", "inline; filename=studentreport.pdf");
+        ByteArrayInputStream bis =  GeneratePdfReport.tableDescReport(allDbTable,listofTableName);
+        byte [] allBytes = bis.readAllBytes();
+        byte [] newBytes = Base64.getEncoder().encode(allBytes);
+        ByteArrayInputStream bis1 = new ByteArrayInputStream(newBytes);
 
+       //FileOutputStream fos =iTableInfoService.converPdfToDoc(bis);
+        var headers = new HttpHeaders();
+        headers.add("Content-Disposition", "inline; filename=TableReport.doc");
+         System.out.println(bis);
         return ResponseEntity
                 .ok()
                 .headers(headers)
-                .contentType(MediaType.APPLICATION_PDF)
-                .body(new InputStreamResource(bis));
+                .contentType(MediaType.MULTIPART_FORM_DATA)
+                .body(new InputStreamResource(bis1));
     }
-
-
-       @Override
-    public void generatePDF(HttpServletResponse response) throws IOException, DocumentException {
-
-        List<TableInfo> tableInfo=new ArrayList<TableInfo>();
-        List<List<TableInfo>> AlldbTable = new ArrayList<>();
-        response.setContentType("application/pdf");
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss");
-        String currentDateTime = dateFormatter.format(new Date());
-
-        String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=pdf_" + currentDateTime + ".pdf";
-        List<String> listofTableName = iTableInfoService.getAllTable();
-        response.setHeader(headerKey, headerValue);
-
-           for (int i = 0; i < 2; i++) {
-            tableInfo  = iTableInfoService.gettingTableInfo(listofTableName.get(i));
-            AlldbTable.add(tableInfo);
-           }
-
-           //GeneratePdfReport.tableDescReport(tableInfo);
-        this.pdfGeneratorService.export(response);
-    }
-
-
-
-
-
-
-
-
 
 }

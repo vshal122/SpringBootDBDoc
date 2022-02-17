@@ -21,9 +21,8 @@ public interface ITableInfoController {
 
     @GetMapping(value = "/pdfreport",
             produces = MediaType.APPLICATION_PDF_VALUE)
-    public ResponseEntity<InputStreamResource> tableInfoReport();
+    public ResponseEntity<InputStreamResource> tableInfoReport() throws IOException;
 
 
-    @GetMapping("/pdf/generate")
-    public void generatePDF(HttpServletResponse response) throws IOException, DocumentException;
+
 }

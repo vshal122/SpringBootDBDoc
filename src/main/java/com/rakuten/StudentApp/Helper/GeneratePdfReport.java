@@ -14,6 +14,8 @@ import java.util.List;
 
 
 import java.io.ByteArrayInputStream;
+import java.util.Locale;
+
 @Slf4j
 public class GeneratePdfReport {
 
@@ -21,7 +23,7 @@ public class GeneratePdfReport {
     static ByteArrayOutputStream out = new ByteArrayOutputStream();
     static   ByteArrayInputStream byteArrayInputStream ;
     static Document document = new Document();
-    public static ByteArrayInputStream tableDescReport(List<List<TableInfo>> AlldbTable) {
+    public static ByteArrayInputStream tableDescReport(List<List<TableInfo>> AlldbTable,List<String> listOfTableName) {
 
 
         log.info("INSIDE GENERATE PDF :{} ",AlldbTable);
@@ -32,7 +34,7 @@ public class GeneratePdfReport {
 
             PdfWriter.getInstance(document, out);
             document.open();
-            writeValuesInPdf(table,AlldbTable);
+            writeValuesInPdf(AlldbTable,listOfTableName);
 
             document. close();
 
@@ -45,27 +47,33 @@ public class GeneratePdfReport {
         return new ByteArrayInputStream(out.toByteArray());
     }
 
-    public static void  writeValuesInPdf(PdfPTable table,List<List<TableInfo>> tableInfoList) throws DocumentException {
+    public static void  writeValuesInPdf(List<List<TableInfo>> tableInfoList,List<String> listOfTableName) throws DocumentException {
+        int size=0;
         for (List<TableInfo> tableInfo : tableInfoList) {
-            Paragraph paragraph = new Paragraph();
-            writeHeader(table);
-            for (TableInfo tableInfo1:tableInfo)
+
+            PdfPTable table1 = new PdfPTable(7);
+            writeHeader(table1);
+            for(TableInfo tableInfo1:tableInfo)
             {
-                writeTableData(tableInfo1,table);
+                writeTableData(tableInfo1,table1);
             }
-            document.add(table);
-            document.add(paragraph);
+            String tableName= listOfTableName.get(size++);
+          //  Paragraph paragraph = new Paragraph(FontFactory.HELVETICA_BOLD);
+            document.add(new Paragraph(Font.BOLD, ("TableName :"+tableName.toUpperCase()+"\n\n\n\n")));
+            document.add(new Paragraph("This Table used for Storing Data of : "+tableName.toUpperCase()+"  Table \n\n\n"));
+            document.add(table1);
+            document.add(new Paragraph("\n\n"));
+
         }
 
     }
 
 
     public static void writeHeader(PdfPTable table) throws DocumentException {
-        table.setWidthPercentage(60);
-        table.setWidths(new int[]{8, 8, 4,4,6,4,12});
+        table.setWidthPercentage(100);
+        table.setWidths(new int[]{50, 45, 20,20,20,20,60});
 
         Font headFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
-
         PdfPCell hcell;
         hcell = new PdfPCell(new Phrase("Field", headFont));
         hcell.setHorizontalAlignment(Element.ALIGN_CENTER);

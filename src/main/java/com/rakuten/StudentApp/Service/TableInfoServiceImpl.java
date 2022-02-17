@@ -1,14 +1,27 @@
 package com.rakuten.StudentApp.Service;
 
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.parser.PdfReaderContentParser;
+import com.itextpdf.text.pdf.parser.SimpleTextExtractionStrategy;
+import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
 import com.rakuten.StudentApp.Model.TableInfo;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.xwpf.usermodel.BreakType;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.sql.DataSource;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -63,6 +76,36 @@ public class TableInfoServiceImpl implements ITableInfoService{
         return listOfTables;
 
     }
+
+    @Override
+    public void converPdfToDoc(ByteArrayInputStream byteData) throws IOException {
+        XWPFDocument doc = new XWPFDocument(byteData);
+        int numberToPrint = 0;
+
+      // you can edit paragraphs
+        for (XWPFParagraph para : doc.getParagraphs()) {
+            List<XWPFRun> runs = para.getRuns();
+
+            numberToPrint++;
+
+            for (XWPFRun run : runs) {
+
+                // read text
+                String text = run.getText(0);
+
+                // edit text and update it
+                run.setText(numberToPrint + " " + text, 0);
+            }
+        }
+
+        FileOutputStream fos = new FileOutputStream(new File("updated.docx"));
+      //  InputStreamResource ios = new InputStreamResource();
+       // return fos;
+
+
+    }
+
+
 
 
 
