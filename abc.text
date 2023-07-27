@@ -1,0 +1,696 @@
+
+
+
+    @Column(name ="IOC_PATH_DIVERSITY")
+    private Boolean iocPathDiversity;
+    @Column(name ="IOC__AVOIDANCE")
+    private Boolean iocAvoidance;
+    @Column(name ="IOC_LOW_LATENCY")
+    private Boolean iocLowLatency;
+    @Column(name ="IOC_SEND_IOC_GO_REPORT")
+    private Boolean iocSendIOCGoReport;
+    @Column(name ="SEND_IOC_PROJECT_LETTER")
+    private Boolean sendIocProjectLetter;
+    @Column(name ="A_PREBUILT_CARRIER_HOTEL")
+    private Boolean apreBuiltCarrierHotel;
+    @Column(name ="Z_PREBUILT_CARRIER_HOTEL")
+    private Boolean zpreBuiltCarrierHotel;
+    @Column(name ="CUSTOMER_REQUESTED_DUE_DATE")
+    private Date crDd;
+    @Column(name ="POST_SALE_ORDER_RID")
+    private Date pmPostSaleOrderRid;
+    @Column(name ="POST_SALE_ORDER_RID_ACTUAL")
+    private Date pmPostSaleOrderRidActual;
+    @Column(name ="POST_SALE_ORDER_DD")
+    private Date pmPostSaleOrderDD;
+    @Column(name ="POST_SALE_ORDER_DD_ACTUAL")
+    private Date pmPostSaleOrderDDActual;
+    @Column(name ="LOC_A_POST_SALE_JEOPARDY_INITIATED")
+    private Date pmLocAPostSaleJeopardyInitiated;
+    @Column(name ="LOC_A_INFRASTRUCTURE_COMPLETE_ECD")
+    private Date pmLocAInfrastructureCompleteEcd;
+    @Column(name ="LOC_A_INFRASTRUCTURE_COMPLETE_ACD")
+    private Date pmLocAInfrastructureCompleteAcd;
+    @Column(name ="LOC_A_CNR_EXPECTED_RESOLUTION_DATE")
+    private Date pmLocACnrExpectedResolutionDate;
+    @Column(name ="LOC_Z_POST_SALE_JEOPARDY_INITIATED")
+    private Date pmLocZPostSaleJeopardyInitiated;
+    @Column(name ="LOC_Z_INFRASTRUCTURE_COMPLETE_ECD")
+    private Date pmLocZInfrastructureCompleteEcd;
+    @Column(name ="LOC_Z_INFRASTRUCTURE_COMPLETE_ACD")
+    private Date pmLocZInfrastructureCompleteAcd;
+    @Column(name ="LOC_Z_CNR_EXPECTED_RESOLUTION_DATE")
+    private Date pmLOCZCNRExpectedResolutionDate;
+    @Column(name ="IOC_COMPLETION_DATE_ECD")
+    private Date pmIocCompletionDateEcd;
+    @Column(name ="IOC_COMPLETION_DATE_ACD")
+    private Date pmIocCompletionDateAcd;
+    @Column(name ="IOC_HFL_ECD")
+    private Date iocHflECcd;
+    
+    @Column(name ="IOC_ACD_GO_REPORT")
+    private Date iocAcdGoReport;
+    @Column(name ="SR_ISSUE_DATE")
+    private Date srIssueDate;
+    @Column(name ="A_HANDOFF_PROVIDED_ACD")
+    private Date ahandoffProvidedAcd;
+    @Column(name ="Z_HANDOFF_PROVIDED_ACD")
+    private Date zhandoffProvidedAcd;
+    @Column(name ="NOT_SUBMITTED_ACD")
+    private Date notSubmittedAcd;
+    @Column(name ="IOC_CAPACITY_CHECK_ACD")
+    private Date iocCapacityCheckAcd;
+    @Column(name ="SENT_TO_ECAP_HSAT_ACD")
+    private Date sentToECAPHsatAcd;
+    @Column(name ="RETURNED_FROM_ECAP_HSAT_ACD")
+    private Date returnedFromEcapHsatAcd;
+    @Column(name ="A_ACCESS_BUILD_COMPLETE_ACD")
+    private Date aaccessBuildCompleteAcd;
+    @Column(name ="Z_ACCESS_BUILD_COMPLETE_ACD")
+    private Date zaccessBuildCompleteAcd;
+    @Column(name ="SERVICE_DELIVERY_COMPLETE_ACD")
+    private Date serviceDeliveryCompleteAcd;
+    @Column(name ="RETURNED_FROM_ECAP_ECD")
+    private Date returnedFromEcapEcd;
+    @Column(name ="A_ACCESS_BUILD_COMPLETE_ECD")
+    private Date aaccessBuildCompleteEcd;
+    @Column(name ="Z_ACCESS_BUILD_COMPLETE_ECD")
+    private Date zaccessBuildCompleteEcd;
+    @Column(name ="SERVICE_DELIVERY_COMPLETE_ECD")
+    private Date serviceDeliveryCompleteEcd;
+    @Column(name ="CANCEL_ACD")
+    private Date cancelAcd;
+    @Column(name ="EPLSWAN_RID_ECD")
+    private Date eplswanRidEcd;
+    @Column(name ="EPLSWAN_RID_ACD")
+    private Date eplswanRidAcd;
+    @Column(name ="EPLSWAN_SID_ECD")
+    private Date eplswanSidEcd;
+    @Column(name ="EPLSWAN_SID_ACD")
+    private Date eplswanSidAcd;
+    @Column(name ="EPLSWAN_WOT_ECD")
+    private Date eplswanWotEcd;
+    @Column(name ="EPLSWAN_WOT_ACD")
+    private Date eeplswanWotAcd;
+    @Column(name ="EPLSWAN_CTA_SERVICE_DELIVERY_ECD")
+    private Date eplswanCtaEcd;
+    
+    --------------------------------------------------------------------
+    @Column(name ="EPLSWAN_CTA_SERVICE_DELIVERY_ACD")
+    private Date eplswanCtaAcd;
+    @Column(name ="EPLSWAN_DD_ECD")
+    private Date eplswanDdEcd;
+    @Column(name ="EPLSWAN_DD_ACD")
+    private Date eplswanDdAcd;
+    @Column(name ="A_FOD_ECD")
+    private Date afodEcd;
+    @Column(name ="A_FOD_ACD")
+    private Date afodAcd;
+    @Column(name ="Z_FOD_ECD")
+    private Date zfodEcd;
+    @Column(name ="Z_FOD_ACD")
+    private Date zfodAcd;
+    @Column(name ="A_PTD_ECD")
+    private Date aptdEcd;
+    @Column(name ="A_PTD_ACD")
+    private Date aptdAcd;
+    @Column(name ="Z_PTD_ECD")
+    private Date zptdEcd;
+    @Column(name ="Z_PTD_ACD")
+    private Date zptdAcd;
+    @Column(name ="A_DD_ECD")
+    private Date addEcd;
+    @Column(name ="A_DD_ACD")
+    private Date addAcd;
+    @Column(name ="Z_DD_ECD")
+    private Date zddEcd;
+    @Column(name ="Z_DD_ACD")
+    private Date zddAcd;
+    @Column(name ="A_CPIN_ISSUED")
+    private Date acpinIssued;
+    @Column(name ="Z_CPIN_ISSUED")
+    private Date zcpinIssued;
+    @Column(name ="A_EAD_ECD")
+    private Date aeADECD;
+    @Column(name ="A_EAD_ACD")
+    private Date aeadAcd;
+    @Column(name ="Z_EAD_ECD")
+    private Date zeadEcd;
+    @Column(name ="Z_EAD_ACD")
+    private Date zeadAcd;
+    @Column(name ="A_WOT_ECD")
+    private Date awotEcd;
+    @Column(name ="A_WOT_ACD")
+    private Date awotAcd;
+    @Column(name ="Z_WOT_ECD")
+    private Date zwotEcd;
+    @Column(name ="Z_WOT_ACD")
+    private Date zwotAcd;
+    @Column(name ="A_FOC_ECD")
+    private Date afocEcd;
+    @Column(name ="A_FOC_ACD")
+    private Date afocAcd;
+    @Column(name ="Z_FOC_ECD")
+    private Date zfocEcd;
+    @Column(name ="Z_FOC_ACD")
+    private Date zfocAcd;
+    @Column(name ="IOC_GO_REPORT_SENT_ACD")
+    private Date iocGoReportSentAcd;
+    @Column(name ="IOC_PROJECT_LETTER_SENT_ACD")
+    private Date iocProjectLetterSentACD;
+    @Column(name ="A_CPIN_RECEIVED_ACD")
+    private Date acpinReceivedAcd;
+    @Column(name ="Z_CPIN_RECEIVED_ACD")
+    private Date zcpinReceivedAcd;
+    @Column(name ="A_SERVICE_ORDER_TRIGGERED_ECD")
+    private Date aserviceOrderTriggeredEcd;
+    @Column(name ="A_SERVICE_ORDER_TRIGGERED_ACD")
+    private Date aserviceOrderTriggeredAcd;
+    @Column(name ="Z_SERVICE_ORDER_TRIGGERED_ECD")
+    private Date zserviceOrderTriggeredEcd;
+    @Column(name ="Z_SERVICE_ORDER_TRIGGERED_ACD")
+    private Date zserviceOrderTriggeredAcd;
+    @Column(name ="A_INFRASTRUCTURE_JEP_INITIATED")
+    private Date ainfrastructureJepInitiated;
+    @Column(name ="BUILD_HAWKEYE_RECEIVED_ACD")
+    private Date ioCBuildHawkeyeReceivedAcd;
+    @Column(name ="SOLD_ACD")
+    private Date soldAcd;
+    @Column(name ="A_NISE_VALIDATION_DATE")
+    private Date anISEValidationDate;
+    @Column(name ="Z_NISE_VALIDATION_DATE")
+    private Date znISEValidationDate;
+    @Column(name ="EPLSWAN_FOC_ECD")
+    private Date eplswanFocEcd;
+    @Column(name ="EPLSWAN_FOC_ACD")
+    private Date eplswanFocAcd;
+    @Column(name ="IOC_CO_EQ_INSTALLED_ECD")
+    private Date iocCoEqInstalledEcd;
+    @Column(name ="IOC_CO_EQ_INSTALLED_ACD")
+    private Date iocCoEqInstalledAcd;
+    @Column(name ="IOC_PROJECT_COMP_NOTIFICATION_ISSUED_ACD")
+    private Date ioCProjectCompNotificationIssuedACD;
+    @Column(name ="PROJECT_STATUS_2",length = 50)
+    private String projectStatus2;
+    @Column(name ="EPLS",length = 50)
+    private String epls;
+    @Column(name ="EPLS_10GIGE_LAN_PHY",length = 50)
+    private String epls10GigeLanPhy;
+    
+    
+    
+    -----------------------------------------------------
+    @Column(name ="A_CONTRACT_TERM",length = 50)
+    private String acontractTerm;
+    @Column(name ="A_(ACCESS_TRANSPORT)",length = 50)
+    private String aaccessTransport;
+    @Column(name ="Z_(ACCESS_TRANSPORT)",length = 50)
+    private String zaccessTransport;
+    @Column(name ="A_HICAP_ENET",length = 50)
+    private String ahicapEnet;
+    @Column(name ="Z_HICAP_ENET",length = 50)
+    private String zhicapEnet;
+    @Column(name ="Z_HICAP_10GE",length = 50)
+    private String zhicap10Ge;
+    @Column(name ="A_HICAP_10GE",length = 50)
+    private String ahicap10Ge;
+    @Column(name ="A_HICAP_40GB",length = 50)
+    private String ahicap40Gb;
+    @Column(name ="Z_HICAP_40GB",length = 50)
+    private String zhicap40Gb;
+    @Column(name ="A_HICAP_100GB",length = 50)
+    private String ahicap100Gb;
+    @Column(name ="Z_HICAP_100GB",length = 50)
+    private String zhicap100Gb;
+    @Column(name ="Z_CONTRACT_TERM",length = 50)
+    private String zcontractTerm;
+    @Column(name ="Z_PHYSICAL_INTERFACE_600M_1G",length = 50)
+    private String zphysicalInterface600M1G;
+    @Column(name ="Z_PHYSICAL_INTERFACE_10G",length = 50)
+    private String zphysicalInterface10G;
+    @Column(name ="APPLIED_SERVICES",length = 50)
+    private String appliedServices;
+    @Column(name ="NSS_PRE_SALE_CONSULTANTS_STATUS",length = 50)
+    private String nsSPreSaleConsultantsStatus;
+    @Column(name ="IOC_PRICING",length = 50)
+    private String ioCPricing;
+    @Column(name ="A_ACCESS_PRODUCT",length = 50)
+    private String aaccessProduct;
+    @Column(name ="Z_ACCESS_PRODUCT",length = 50)
+    private String zaccessProduct;
+    @Column(name ="IOC_CLOSED_SOLD",length = 50)
+    private String ioCClosedSold;
+    @Column(name ="A_LOCATION_CLOSED_SOLD",length = 50)
+    private String alocationClosedSold;
+    @Column(name ="Z_LOCATION_CLOSED_SOLD",length = 50)
+    private String zlocationClosedSold;
+    @Column(name ="POST_SALE_IOC_STATUS",length = 50)
+    private String postSaleIOCStatus;
+    @Column(name ="SR_ORDER_TYPE",length=50)
+    private String srOrderType;
+    @Column(name ="POST_SALE_A_STATUS",length=50)
+    private String postSaleAStatus;
+    @Column(name ="POST_SALE_Z_STATUS",length=50)
+    private String postSaleZStatus;
+    @Column(name ="POST_SALE_A2_STATUS",length=50)
+    private String postSaleA2Status;
+    @Column(name ="POST_SALE_Z2_STATUS",length=50)
+    private String postSaleZ2Status;
+    @Column(name ="DISCONNECT",length=50)
+    private String disconnect;
+    @Column(name ="REWORK",length=50)
+    private String rework;
+    @Column(name ="IOC_CAPACITY_LEVEL_PROTOCOL",length=50)
+    private String iocCapacityLevelProtocol;
+    @Column(name ="MARKET",length=50)
+    private String market;
+    @Column(name ="A_CARRIER_HOTEL",length=50)
+    private String acarrierHotel;
+    @Column(name ="Z_CARRIER_HOTEL",length=50)
+    private String zcarrierHotel;
+    @Column(name ="IOC_DIVERSITY",length=50)
+    private String iocDiversity;
+    @Column(name ="MEET_POINT",length=50)
+    private String meetPoint;
+    @Column(name ="A_NISE_VALIDATED",length=50)
+    private String aniseValidated;
+    @Column(name ="Z_NISE_VALIDATED",length=50)
+    private String zniseValidated;
+    @Column(name ="A_DIVERSITY_EPLSWAN",length=50)
+    private String adiversityEplswan;
+    @Column(name ="Z_DIVERSITY_EPLSWAN",length=50)
+    private String zdiversityEPLSWAN;
+    @Column(name ="A_ADE_COMPLEXITY",length=50)
+    private String aadeComplexity;
+    @Column(name ="Z_ADE_COMPLEXITY",length=50)
+    private String zaDEComplexity;
+    @Column(name ="COVID_19",length=50)
+    private String covid19;
+    @Column(name ="REQUEST_ID")
+    private Integer requestID;
+    @Column(name ="HIDE_CONTACT_AND_ADMINISTRATIVE_INFORMATION")
+    private Boolean hideContactAndAdministrativeInformation;
+    @Column(name ="HIDE_AT&T_INFORMATION")
+    private Boolean hideAttInformation;
+    @Column(name ="HIDE_DIVERSE_ACCESS")
+    private Boolean hideDiverseAccess;
+    @Column(name ="HIDE_FIRM_PRICE_QUOTE")
+    private Boolean hideFirmPriceQuote;
+    @Column(name ="A_CUSTOMER_CLLI",length=200)
+    private String  acustomerClli;
+    @Column(name ="Z_CUSTOMER_CLLI",length=200)
+    private String  zcustomerClli;
+    @Column(name ="USRP_PROJECT_NUMBER",length=200)
+    private String  usrpProjectNumber;
+    @Column(name ="IOC_PROBABILITY_OF_SALE",length=200)
+    private String  iocProbabilityOfSale;
+    @Column(name ="IOC_REQUESTER_NAME",length=200)
+    private String  iocRequesterName;
+    @Column(name ="IOC_REQUESTER_PHONE",length=200)
+    private String  iocRequesterPhone;
+    @Column(name ="IOC_REQUESTER_TITLE",length=200)
+    private String  iocRequesterTitle;
+    @Column(name ="IOC_REQUESTER_EMAIL",length=200)
+    private String  iocRequesterEmail;
+    @Column(name ="A_LATA",length=200)
+    private String  alATA;
+    @Column(name ="Z_LATA",length=200)
+    private String  zlATA;
+    @Column(name ="Z_PSUEDO_LSO_ONLY_USED_FOR_CLEC_ACCESS",length=200)
+    private String  zpsuedoLsoOnlyUsedForClecAccess;
+    @Column(name ="Z_CKL_1_BAY",length=200)
+    private String  zckl1Bay;
+    @Column(name ="Z_ETHERNET_TOKEN_ID",length=200)
+    private String  zethernetTokenID;
+    @Column(name ="EXCEPTION_NUMBER",length=200)
+    private String  exceptionNumber;
+    @Column(name ="ALT_TSC_UID",length=200)
+    private String  altTscUid;
+    @Column(name ="CUSTOMER_NAME",length=200)
+    private String  mainCustomerName;
+    @Column(name ="A_USSO_NUMBER",length=200)
+    private String  auSSONumber;
+    @Column(name ="A_ATT_POP_LATA",length=200)
+    private String  aattPopLata;
+    @Column(name ="Z_ATT_POP_LATA",length=200)
+    private String  zattPopLata;
+    @Column(name ="A_PRICER_D_COMMON_ID",length=200)
+    private String  apricerDCommonId;
+    @Column(name ="Z_PRICER_D_COMMON_ID",length=200)
+    private String  zpricerDCommonId;
+    @Column(name ="A_PRI_CUSTOMER_POP",length=200)
+    private String  apriCustomerPop;
+    @Column(name ="A_SEC_CUSTOMER_POP",length=200)
+    private String  asecCustomerPop;
+    @Column(name ="A_PRI_BTO_BTS",length=200)
+    private String  apriBtoBts;
+    @Column(name ="A_SEC_BTO_BTS",length=200)
+    private String  asecBtoBts;
+    @Column(name ="Z_PRI_CUSTOMER_POP",length=200)
+    private String  zpriCustomerPop;
+    @Column(name ="Z_SEC_CUSTOMER_POP",length=200)
+    private String  zsecCustomerPop;
+    @Column(name ="Z_PRI_BTO_BTS",length=200)
+    private String  zpriBtoBts;
+    @Column(name ="Z_SEC_BTO_BTS",length=200)
+    private String  zsecBtoBts;
+    @Column(name ="A_VENDOR_OTHER",length=200)
+    private String  avendorOther;
+    @Column(name ="Z_VENDOR_OTHER",length=200)
+    private String  zvendorOther;
+    @Column(name ="A_PRICER_D_SOLUTION_ID",length=200)
+    private String  apricerDSolutionId;
+    @Column(name ="Z_PRICER_D_SOLUTION_ID",length=200)
+    private String  zpricerDSolutionId;
+    @Column(name ="POST_SALE_CIRCUIT_ORDER_NUMBER",length=200)
+    private String  pmPostSaleCircuitOrderNumber;
+    @Column(name ="POST_SALE_ORDER_ISSUED",length=200)
+    private String  pmPostSaleOrderIssued;
+    @Column(name ="LOC_A_POST_SALE_JEOPARDY",length=200)
+    private String  pmLocAPostSaleJeopardy;
+    @Column(name ="LOC_Z_POST_SALE_JEOPARDY",length=200)
+    private String  pmLocZPostSaleJeopardy;
+    @Column(name ="IMS_NUMBER",length=200)
+    private String  imsNumber;
+    @Column(name ="A_IMS_NUMBER",length=200)
+    private String  aimsNumber;
+    @Column(name ="Z_IMS_NUMBER",length=200)
+    private String  ziMSNumber;
+    @Column(name ="A_CUSTOMER_LOCATION_TYPE",length=200)
+    private String  acustomerLocationType;
+    @Column(name ="Z_CUSTOMER_LOCATION_TYPE",length=200)
+    private String  zcustomerLocationType;
+    @Column(name ="CUSTOMER_CONTACT_NAME",length=200)
+    private String  customerContactName;
+    @Column(name ="IOC_PROJECT_NUMBER",length=200)
+    private String  ioCProjectNumber;
+    @Column(name ="SR_ORDER_NUMBER_USO",length=200)
+    private String  srOrderNumber;
+    @Column(name ="A_PAA_CODE",length=200)
+    private String  apAaCode;
+    @Column(name ="Z_PAA_CODE",length=200)
+    private String  zpaaCode;
+    @Column(name ="A_VALID_TDI_AVAILABLE",length=200)
+    private String  avalidTdiAvailable;
+    @Column(name ="Z_VALID_TDI_AVAILABLE",length=200)
+    private String  zvalidTdiAvailable;
+    @Column(name ="A_SPECIAL_CONSTRUCTION_CASE_NO",length=200)
+    private String  aspecialConstructionCaseNo;
+    @Column(name ="Z_SPECIAL_CONSTRUCTION_CASE_NO",length=200)
+    private String  zspecialConstructionCaseNo;
+    @Column(name ="A_DMARC",length=200)
+    private String  admarc;
+    @Column(name ="Z_DMARC",length=200)
+    private String  zdmarc;
+    @Column(name ="LOCAL_CIRCUIT_ID",length=200)
+    private String  localCircuitId;
+    @Column(name ="LONG_DISTANCE_CIRCUIT_ID",length=200)
+    private String  longDistanceCircuitId;
+    @Column(name ="CPOD_TEST_REQUEST_ID",length=200)
+    private String  cpODTestRequestId;
+    @Column(name ="ASSIGNPRESALECONSULTANTSID",length=200)
+    private String  assignPreSaleConsultantsId;
+    @Column(name ="A_TDI",length=200)
+    private String  atdi;
+    @Column(name ="Z_TDI",length=200)
+    private String  ztdi;
+    @Column(name ="ECAP_REQUEST_ID_A_PRIMARY",length=200)
+    private String  ecapRequestIdAPrimary;
+    @Column(name ="ECAP_REQUEST_ID_A_DIVERSE",length=200)
+    private String  ecapRequestIdADiverse;
+    @Column(name ="ECAP_REQUEST_ID_Z_PRIMARY",length=200)
+    private String  ecapRequestIdZPrimary;
+    @Column(name ="ECAP_REQUEST_ID_Z_DIVERSE",length=200)
+    private String  ecapRequestIdZDiverse;
+    @Column(name ="LARGE_PROJECT_IDENTIFIER",length=200)
+    private String  largeProjectIdentifier;
+    @Column(name ="A_SPECIAL_ROUTING_CODE",length=200)
+    private String  aspecialRoutingCode;
+    @Column(name ="Z_SPECIAL_ROUTING_CODE",length=200)
+    private String  zspecialRoutingCode;
+    @Column(name ="EPLSWAN_RID_JEP",length=200)
+    private String  eplswanRidJep;
+    @Column(name ="EPLSWAN_SID_JEP",length=200)
+    private String  eplswanSidJep;
+    @Column(name ="EPLSWAN_WOT_JEP",length=200)
+    private String  eplswanWotJep;
+    @Column(name ="EPLSWAN_CTA_SERVICE_DELIVERY_JEP",length=200)
+    private String  eplswanCtaJep;
+    @Column(name ="EPLSWAN_DD_JEP",length=200)
+    private String  eplswanDdJep;
+    @Column(name ="ETHERNET_ORDERING_TOOL_REQUEST_ID",length=200)
+    private String  ethernetOrderingToolRequestID;
+    @Column(name ="USRP_PARTIAL_ORDER_NUMBER",length=200)
+    private String  usroPartialOrderNumber;
+    @Column(name ="A_ICSC",length=200)
+    private String  aicsc;
+    @Column(name ="Z_ICSC",length=200)
+    private String  zicsc;
+    @Column(name ="A_EC_ORD",length=200)
+    private String  aecOrd;
+    @Column(name ="Z_EC_ORD",length=200)
+    private String  zeCORD;
+    @Column(name ="A_EC_CKT_ID",length=200)
+    private String  aecCktId;
+    @Column(name ="Z_EC_CKT_ID",length=200)
+    private String  zecCktId;
+    @Column(name ="A_FOD_JEP",length=200)
+    private String  afodJep;
+    @Column(name ="Z_FOD_JEP",length=200)
+    private String  zfODJEP;
+    @Column(name ="A_PTD_JEP",length=200)
+    private String  aptdJep;
+    @Column(name ="Z_PTD_JEP",length=200)
+    private String  zptdJep;
+    @Column(name ="A_DD_JEP",length=200)
+    private String  addJep;
+    @Column(name ="Z_DD_JEP",length=200)
+    private String  zddJep;
+    @Column(name ="A_PED_ASR",length=200)
+    private String  apedAsr;
+    @Column(name ="A_JEP_CODE",length=200)
+    private String  ajepCode;
+    @Column(name ="Z_JEP_CODE",length=200)
+    private String  zjepCode;
+    @Column(name ="A_EAD_JEP",length=200)
+    private String  aeadJep;
+    @Column(name ="Z_EAD_JEP",length=200)
+    private String  zeadJep;
+    @Column(name ="A_WOT_JEP",length=200)
+    private String  awotJep;
+    @Column(name ="Z_WOT_JEP",length=200)
+    private String  zwotJep;
+    @Column(name ="A_PON",length=200)
+    private String  apon;
+    @Column(name ="Z_PON",length=200)
+    private String  zpON;
+    @Column(name ="A_S_CLO",length=200)
+    private String  asClo;
+    @Column(name ="Z_S_CLO",length=200)
+    private String  zsClo;
+    @Column(name ="A_SERVICE_ORDER_NUMBER_C_NUMBER",length=200)
+    private String  aserviceOrderNumberCNumber;
+    @Column(name ="Z_SERVICE_ORDER_NUMBER_C_NUMBER",length=200)
+    private String  zserviceOrderNumberCNumber;
+    @Column(name ="A_LOCAL_CIRCUIT_ID",length=200)
+    private String  alocalCircuitId;
+    @Column(name ="Z_LOCAL_CIRCUIT_ID",length=200)
+    private String  zlocalCircuitId;
+    @Column(name ="IOC_DISTRIBUTION_LIST",length=200)
+    private String  ioCDistributionList;
+    @Column(name ="A_FOC_JEP",length=200)
+    private String  afocJep;
+    @Column(name ="Z_FOC_JEP",length=200)
+    private String  zfocJep;
+    @Column(name ="NETWORK_CONTACT",length=200)
+    private String  networkContact;
+    @Column(name ="IOC_WONO",length=200)
+    private String  iocWono;
+    @Column(name ="ADS_TICKET_NUMBER",length=200)
+    private String  adSTicketNumber;
+    @Column(name ="IOC_FACILITY_ID_NUMBER",length=200)
+    private String  ioCFacilityIDNumber;
+    @Column(name ="IOC_END_CUSTOMER",length=200)
+    private String  iocEndCustomer;
+    @Column(name ="IOC_NSS_PM",length=200)
+    private String  iocNssPm;
+    @Column(name ="IOC_NO_OF_NODES",length=200)
+    private String  iocNoOfNodes;
+    @Column(name ="IOC_TDP_LOAD",length=200)
+    private String  iocTdpLoad;
+    @Column(name ="ORDER_MANAGER",length=200)
+    private String  orderManager;
+    @Column(name ="IOC_ADDITIONAL_IDS",length=200)
+    private String  iocAdditionalIds;
+    @Column(name ="A_IP_ADDRESS",length=200)
+    private String  aipAddress;
+    @Column(name ="Z_IP_ADDRESS",length=200)
+    private String  ziPAddress;
+    @Column(name ="IOC_INSTALLATION_VENDOR",length=200)
+    private String  iocInstallationVendor;
+    @Column(name ="IOC_PLANNER_PM",length=200)
+    private String  iocPlannerPm;
+    @Column(name ="A_INFRASTRUCTURE_JEP",length=200)
+    private String  ainfrastructureJep;
+    @Column(name ="Z_INFRASTRUCTURE_JEP",length=200)
+    private String  zinfrastructureJep;
+    @Column(name ="Z_PED_ASR",length=200)
+    private String  zpedAsr;
+    @Column(name ="A_CUSTOMER_FIBER_INTERFACE",length=200)
+    private String  acustomerFiberInterface;
+    @Column(name ="Z_CUSTOMER_FIBER_INTERFACE",length=200)
+    private String  zcustomerFiberInterface;
+    @Column(name ="OVERARCHING_OPPORTUNITY_ID",length=200)
+    private String  overarchingOpportunityId;
+    @Column(name ="A_DIVERSE_PON",length=200)
+    private String  adiversePon;
+    @Column(name ="Z_DIVERSE_PON",length=200)
+    private String  zdiversePON;
+    @Column(name ="DIVERSE_IOC_PROJECT_NUMBER",length=200)
+    private String  diverseIOCProjectNumber;
+    @Column(name ="A_NISE_STATUS",length=200)
+    private String  aniseStatus;
+    @Column(name ="Z_NISE_STATUS",length=200)
+    private String  zniseStatus;
+    @Column(name ="ETHERNET_TYPE",length=200)
+    private String  ethernetType;
+    @Column(name ="A_ACCESS_VENDOR_EPLS",length=200)
+    private String  avendorEpls;
+    @Column(name ="Z_ACCESS_VENDOR_EPLS",length=200)
+    private String  zvendorEpls;
+    @Column(name ="PMATT_PROJ_ID",length=200)
+    private String  pmattProjId;
+    @Column(name ="SERVICE_REQ_ID",length=200)
+    private String  serviceReqId;
+    @Column(name ="PED_ID",length=200)
+    private String  pedId;
+    @Column(name ="IWOS_ID",length=200)
+    private String  iwosId;
+    @Column(name ="BUPM_UID",length=200)
+    private String  bupmUid;
+    @Column(name ="BUPM_NAME",length=200)
+    private String  bupmName;
+    @Column(name ="IOC_BUILD_TYPE",length=200)
+    private String  iocBuildType;
+    @Column(name ="EFMS_PAA_CODE_CKL1",length=200)
+    private String  efmsPaaCodeCkl1;
+    @Column(name ="EFMS_PAA_CODE_CKL2",length=200)
+    private String  efmsPaaCodeCkl2;
+    @Column(name ="Z_CKL_NUMBER",length=200)
+    private String  zcklNumber;
+    @Column(name ="A_CKL_NUMBER",length=200)
+    private String  acklNumber;
+    @Column(name ="CKL1_POP",length=200)
+    private String  ckl1Pop;
+    @Column(name ="CKL2_POP",length=200)
+    private String  ckl2Pop;
+    @Column(name ="REQUEST_TYPE",length=200)
+    private String  requestType;
+    @Column(name ="PRODUCT_OFFERING",length=200)
+    private String  productOffering;
+    @Column(name ="EARLY_TURN_UP",length=200)
+    private String  earlyTurnup;
+    @Column(name ="A_ACMS_VERSION",length=200)
+    private String  aacmsVersion;
+    @Column(name ="Z_ACMS_VERSION",length=200)
+    private String  zacmsVersion;
+    @Column(name ="ADJUSTED_CURRENT_WORKING_VIEW_DATE",length=200)
+    private String  adjustedProjectTarget;
+    @Column(name ="ESCALATED_IOC",length=200)
+    private String  escalatedIoc;
+    @Column(name ="STATUS_INDICATOR",length=200)
+    private String  statusIndicator;
+    @Column(name ="CKL1_INFRASTRUCTURE_JEOP_RESOLVED_INDICATOR",length=200)
+    private String  infrastructureJeopResolvedIndicator;
+    @Column(name ="CKL2_INFRASTRUCTURE_JEOP_RESOLVED_INDICATOR",length=200)
+    private String  ckL2InfrastructureJeopResolvedIndicator;
+    @Column(name ="BUILD_LOCATION_TYPE",length=200)
+    private String  buildLocationType;
+    @Column(name ="BUILD_LOCATION_TYPE_CKL2",length=200)
+    private String  buildLocationTypeCKL2;
+    @Column(name ="CKL1_DIVERSE_CKID_PED",length=200)
+    private String  ckL1DiverseCkidPed;
+    @Column(name ="CKL2_DIVERSE_CKID_PED",length=200)
+    private String  ckL2DiverseCkidPed;
+    @Column(name ="CKL1_DIVERSE_COMMON_ID_PED",length=200)
+    private String  ckL1DiverseCommonIdPed;
+    @Column(name ="CKL2_DIVERSE_COMMON_ID_PED",length=200)
+    private String  ckl2DiverseCommonIdPed;
+    @Column(name ="MARKET_STRAT",length=200)
+    private String  marketStrat;
+    @Column(name ="HFL_TERM_A",length=200)
+    private String  hflTerma;
+    @Column(name ="HFL_TERM_Z",length=200)
+    private String  hflTermz;
+    @Column(name ="CKL1_WFA_REGION",length=200)
+    private String  wfARegion;
+    @Column(name ="CKL2_WFA_REGION",length=200)
+    private String  ckl2WfaRegion;
+    @Column(name ="CKL1_WFA_REGION",length=200)
+    private String  ckl1WfaRegion;
+    @Column(name ="CKL1_PED_ID",length=200)
+    private String  ckl1PEedId;
+    @Column(name ="CKL1_DIVERSE_PED_ID",length=200)
+    private String  ckl1DiversePedId;
+    @Column(name ="CKL2_PED_ID",length=200)
+    private String  ckl2PedId;
+    @Column(name ="CKL2_DIVERSE_PED_ID",length=200)
+    private String  ckl2DiversePedId;
+    @Column(name ="CKL1_COMMON_ID_PED_STATUS",length=200)
+    private String  ckl1CommonIdPedStatus;
+    @Column(name ="CKL2_COMMON_ID_PED_STATUS",length=200)
+    private String  ckl2CommonIDPedStatus;
+    @Column(name ="CKL1_DIV_CID_PED_STATUS",length=200)
+    private String  ckl1DivCidPedStatus;
+    @Column(name ="CKL2_DIV_CID_PED_STATUS",length=200)
+    private String  ckl2DivCidPedStatus;
+    @Column(name ="IOC_PREMIUM_INDICATOR",length=200)
+    private String  iocPremiumIndicator;
+    @Column(name ="CKL1_TDI_SENT",length=200)
+    private String  ckL1TDIsent;
+    @Column(name ="CKL2_TDI_SENT",length=200)
+    private String  ckL2TDISent;
+    @Column(name ="CKL1_DLRD_ACD",length=200)
+    private String  ckl1DlrdAcd;
+    @Column(name ="CKL2_DLRD_ACD",length=200)
+    private String  ckl2DlrdAcd;
+    @Column(name ="IOC_BUILD_NOTES",length=200)
+    private String  iocBuildNotes;
+    @Column(name ="IOC_A_LOC_CLLI",length=200)
+    private String  ioCALocClli;
+    @Column(name ="IOC_Z_LOC_CLLI",length=200)
+    private String  iocZLocClli;
+    @Column(name ="LOC_A_POST_SALE_JEOPARDY_NOTES")
+    private String  pmLocAPostSaleJeopardyNotes;
+    @Column(name ="LOC_A_CNR_REASON")
+    private String  pmLocACnrReason;
+    @Column(name ="LOC_A_TRACKING_NOTES")
+    private String  pmLocATrackingNotes;
+    @Column(name ="LOC_Z_POST_SALE_JEOPARDY_NOTES")
+    private String  pmLOCZPostSaleJeopardyNotes;
+    @Column(name ="LOC_Z_CNR_REASON")
+    private String  pmLOCZCNRReason;
+    @Column(name ="LOC_Z_TRACKING_NOTES")
+    private String  pmLocZTrackingNotes;
+    @Column(name ="IOC_JEOPARDY_NOTES")
+    private String  pmIocJeopardyNotes;
+    @Column(name ="CUSTOMER_NOTES")
+    private String  customerNotes;
+    @Column(name ="IOC_TDP_LOAD_NOTES")
+    private String  iocTdpLoadNotes;
+    @Column(name ="SOTS_LOG")
+    private String  sotsLog;
+    @Column(name ="A_GRETA_CKT_NOTES")
+    private String  agretaCktNotes;
+    @Column(name ="Z_GRETA_CKT_NOTES")
+    private String  zgretaCktNotes;
+    @Column(name ="NEMA_NOTES")
+    private String  nemaNotes;
+    @Column(name ="ESCALATION_NOTES_FIELD")
+    private String  escalationNotesField;
+    @Column(name ="IOC_BUILD_STATUS_NOTES")
+    private String  ioCBuildStatusNotes;
+    @Column(name ="PRIVATE_LINE_TYPE")
+    private String  privateLineType;
+
+

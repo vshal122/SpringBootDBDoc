@@ -1,0 +1,146 @@
+	@Column(name ="ASSIGNPRESALECONSULTANTSID",length=200)
+	private String  assignPreSaleConsultantsId;
+
+	@Column(name ="A_TDI",length=200)
+	private String  atdi;
+
+	@Column(name ="Z_TDI",length=200)
+	private String  ztdi;
+
+	@Column(name ="ECAP_REQUEST_ID_A_PRIMARY",length=200)
+	private String  ecapRequestIdAPrimary;
+
+	@Column(name ="ECAP_REQUEST_ID_A_DIVERSE",length=200)
+	private String  ecapRequestIdADiverse;
+
+	@Column(name ="ECAP_REQUEST_ID_Z_PRIMARY",length=200)
+	private String  ecapRequestIdZPrimary;
+
+	@Column(name ="ECAP_REQUEST_ID_Z_DIVERSE",length=200)
+	private String  ecapRequestIdZDiverse;
+
+	@Column(name ="LARGE_PROJECT_IDENTIFIER",length=200)
+	private String  largeProjectIdentifier;
+
+	@Column(name ="A_SPECIAL_ROUTING_CODE",length=200)
+	private String  aspecialRoutingCode;
+
+	@Column(name ="Z_SPECIAL_ROUTING_CODE",length=200)
+	private String  zspecialRoutingCode;
+
+	@Column(name ="EPLSWAN_RID_JEP",length=200)
+	private String  eplswanRidJep;
+
+	@Column(name ="EPLSWAN_SID_JEP",length=200)
+	private String  eplswanSidJep;
+
+	@Column(name ="EPLSWAN_WOT_JEP",length=200)
+	private String  eplswanWotJep;
+
+	@Column(name ="EPLSWAN_CTA_SERVICE_DELIVERY_JEP",length=200)
+	private String  eplswanCtaJep;
+
+	@Column(name ="EPLSWAN_DD_JEP",length=200)
+	private String  eplswanDdJep;
+
+	@Column(name ="ETHERNET_ORDERING_TOOL_REQUEST_ID",length=200)
+	private String  ethernetOrderingToolRequestID;
+
+	@Column(name ="USRP_PARTIAL_ORDER_NUMBER",length=200)
+	private String  usroPartialOrderNumber;
+
+	@Column(name ="A_ICSC",length=200)
+	private String  aicsc;
+
+	@Column(name ="Z_ICSC",length=200)
+	private String  zicsc;
+
+	@Column(name ="A_EC_ORD",length=200)
+	private String  aecOrd;
+
+	@Column(name ="Z_EC_ORD",length=200)
+	private String  zeCORD;
+
+	@Column(name ="A_EC_CKT_ID",length=200)
+	private String  aecCktId;
+
+	@Column(name ="Z_EC_CKT_ID",length=200)
+	private String  zecCktId;
+
+	@Column(name ="A_FOD_JEP",length=200)
+	private String  afodJep;
+
+	@Column(name ="Z_FOD_JEP",length=200)
+	private String  zfODJEP;
+
+	@Column(name ="A_PTD_JEP",length=200)
+	private String  aptdJep;
+
+	@Column(name ="Z_PTD_JEP",length=200)
+	private String  zptdJep;
+
+	@Column(name ="A_DD_JEP",length=200)
+	private String  addJep;
+
+	@Column(name ="Z_DD_JEP",length=200)
+	private String  zddJep;
+
+	@Column(name ="A_PED_ASR",length=200)
+	private String  apedAsr;
+
+	@Column(name ="A_JEP_CODE",length=200)
+	private String  ajepCode;
+
+	@Column(name ="Z_JEP_CODE",length=200)
+	private String  zjepCode;
+
+	@Column(name ="A_EAD_JEP",length=200)
+	private String  aeadJep;
+
+	@Column(name ="Z_EAD_JEP",length=200)
+	private String  zeadJep;
+
+	@Column(name ="A_WOT_JEP",length=200)
+	private String  awotJep;
+
+	@Column(name ="Z_WOT_JEP",length=200)
+	private String  zwotJep;
+
+	@Column(name ="A_PON",length=200)
+	private String  apon;
+
+	@Column(name ="Z_PON",length=200)
+	private String  zpON;
+
+	@Column(name ="A_S_CLO",length=200)
+	private String  asClo;
+
+	@Column(name ="Z_S_CLO",length=200)
+	private String  zsClo;
+
+	@Column(name ="A_SERVICE_ORDER_NUMBER_C_NUMBER",length=200)
+	private String  aserviceOrderNumberCNumber;
+
+	@Column(name ="Z_SERVICE_ORDER_NUMBER_C_NUMBER",length=200)
+	private String  zserviceOrderNumberCNumber;
+
+	@Column(name ="A_LOCAL_CIRCUIT_ID",length=200)
+	private String  alocalCircuitId;
+
+	@Column(name ="Z_LOCAL_CIRCUIT_ID",length=200)
+	private String  zlocalCircuitId;
+
+	@Column(name ="IOC_DISTRIBUTION_LIST",length=200)
+	private String  ioCDistributionList;
+
+	@Column(name ="A_FOC_JEP",length=200)
+	private String  afocJep;
+
+	@Column(name ="Z_FOC_JEP",length=200)
+	private String  zfocJep;
+
+	@Column(name ="NETWORK_CONTACT",length=200)
+	private String  networkContact;
+
+	@Column(name ="IOC_WO_NO",length=200)
+	private String  iocWono;

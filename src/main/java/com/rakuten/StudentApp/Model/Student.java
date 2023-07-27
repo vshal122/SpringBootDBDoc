@@ -42,6 +42,12 @@ public class Student {
 	@OneToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL,targetEntity = Subject.class)
 	private List<Subject> subject;
 
+	public Student(String name,Integer rollNo,String moNumber){
+		this.name=name;
+		this.rollNo= rollNo;
+		this.moNumber=moNumber;
+	}
+
 	
 	
 	public List<Subject> getSubjectDetails() {
